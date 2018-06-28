@@ -54,7 +54,7 @@ void changeColor(RGB c1, RGB c2, int duration) {
   while(i < steps) {
     analogWrite(RedPin, interpolate(c1.r, c2.r, 0, steps, i));
     analogWrite(GreenPin, interpolate(c1.g, c2.g, 0, steps, i));
-    analogWrite(BluePin, interpolate(c1.b, c1.b, 0, steps, i));
+    analogWrite(BluePin, interpolate(c1.b, c2.b, 0, steps, i));
     i++;
     delay(1);
   }
